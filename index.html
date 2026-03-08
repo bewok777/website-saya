@@ -1,33 +1,21 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Website Saya</title>
+<title>Game Website Saya</title>
 
 <style>
 body{
-    margin:0;
-    font-family: Arial;
-    background: linear-gradient(135deg,#4facfe,#00f2fe);
-    color:white;
-    text-align:center;
-}
-
-.box{
-    margin-top:120px;
+font-family:Arial;
+text-align:center;
+background:#222;
+color:white;
 }
 
 button{
-    padding:12px 25px;
-    border:none;
-    border-radius:8px;
-    background:white;
-    color:#333;
-    font-size:16px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#eee;
+padding:10px 20px;
+font-size:18px;
+margin-top:10px;
 }
 </style>
 
@@ -35,16 +23,34 @@ button:hover{
 
 <body>
 
-<div class="box">
+<h1>🎮 Tebak Angka</h1>
+<p>Tebak angka dari 1 sampai 10</p>
 
-<h1>🚀 Website Saya</h1>
-<p>Website pertama saya di internet</p>
+<input type="number" id="tebak">
 
-<button onclick="alert('Halo! Terima kasih sudah membuka website saya 😄')">
-Klik Saya
-</button>
+<br><br>
 
-</div>
+<button onclick="cek()">Tebak</button>
+
+<p id="hasil"></p>
+
+<script>
+
+let angka = Math.floor(Math.random()*10)+1;
+
+function cek(){
+
+let t = document.getElementById("tebak").value;
+
+if(t == angka){
+document.getElementById("hasil").innerHTML="🎉 Benar!";
+}else{
+document.getElementById("hasil").innerHTML="❌ Salah!";
+}
+
+}
+
+</script>
 
 </body>
 </html>
