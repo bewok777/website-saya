@@ -2,55 +2,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Game Website Saya</title>
+<title>Bewok77 Game</title>
 
 <style>
+
 body{
+margin:0;
 font-family:Arial;
+background:#111;
+color:white;
 text-align:center;
-background:#222;
+}
+
+.header{
+background:black;
+padding:15px;
+font-size:28px;
+font-weight:bold;
+}
+
+.banner{
+background:linear-gradient(90deg,#ff0000,#ff6600);
+padding:20px;
+margin:10px;
+border-radius:10px;
+}
+
+.btn{
+padding:12px 30px;
+margin:10px;
+border:none;
+border-radius:8px;
+font-size:16px;
+}
+
+.daftar{
+background:blue;
 color:white;
 }
 
-button{
-padding:10px 20px;
-font-size:18px;
-margin-top:10px;
+.login{
+background:red;
+color:white;
 }
-</style>
 
+.menu{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:20px;
+}
+
+.game{
+background:#222;
+padding:20px;
+border-radius:12px;
+font-size:18px;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>🎮 Tebak Angka</h1>
-<p>Tebak angka dari 1 sampai 10</p>
+<div class="header">
+🔥 BEWOK77 GAME
+</div>
 
-<input type="number" id="tebak">
+<div class="banner">
+BONUS GAME SETIAP HARI
+</div>
 
-<br><br>
+<button class="btn daftar">Daftar</button>
+<button class="btn login">Login</button>
 
-<button onclick="cek()">Tebak</button>
+<h2>🎮 Menu Game</h2>
 
-<p id="hasil"></p>
+<div class="menu">
 
-<script>
+<div class="game">🀄 Mahjong</div>
+<div class="game">🐍 Snake</div>
+<div class="game">🎯 Tebak Angka</div>
+<div class="game">🕹 Arcade</div>
+<div class="game">⚽ Sports</div>
+<div class="game">🎰 Slot</div>
 
-let angka = Math.floor(Math.random()*10)+1;
-
-function cek(){
-
-let t = document.getElementById("tebak").value;
-
-if(t == angka){
-document.getElementById("hasil").innerHTML="🎉 Benar!";
-}else{
-document.getElementById("hasil").innerHTML="❌ Salah!";
-}
-
-}
-
-</script>
+</div>
 
 </body>
 </html>
